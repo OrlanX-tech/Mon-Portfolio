@@ -1,0 +1,531 @@
+body {
+    background-color: #0d0d0d;
+}
+
+/*Pied-de-page*/
+footer {
+    background-color: rgb(5, 5, 7);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+/*Barre de navigation*/
+.navbar {
+    position: sticky;
+    top: 0;
+    padding: 5px 20px;
+    /*Pour que navbar reste au dessus du contenu
+    en scrollant*/
+    z-index: 1000;
+}
+
+.navbar-container {
+    background-color: #100218;
+    border-radius: 40px;
+    padding: 5px;
+    width: fit-content;
+    margin: 10px auto;
+    border: 3px solid purple;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: rgba(239, 233, 233, 0.91);
+    transition: color 0.3s ease;
+}
+
+.navlinks a:hover {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+.logo-cercle {
+    width: 45px;
+    height: 45px;
+    border-radius: 60%;
+    background: linear-gradient(135deg, #7C3AED, #C4B5FD);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.logo-cercle:hover {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+
+/*Pour la section hero*/
+.hero {
+    background: linear-gradient(90deg, #ca49cf, #64028b);
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+.hero-gauche {
+    position: absolute;
+    left: 20px;
+    bottom: 300px;
+    z-index: 3;
+    margin-left: 50px;
+}
+
+.badge {
+    background-color: #f4f4f6;
+    padding: 5px;
+    border-radius: 50px;
+    bottom: 100px;
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    color: #8236ae;
+    transform: scale(0.9);
+}
+
+.badge::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(18, 186, 26);
+    margin-right: 5px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80%;
+    filter: grayscale(100%);
+    bottom: 90px;
+    z-index: 1;
+}
+
+.nom {
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 0;
+    color: white;
+}
+
+.metier {
+    font-size: 4rem;
+    font-family: 'Petit Formal Script';
+    color: #c717ca;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: -6;
+}
+
+.hero-titre {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    text-align: center;
+    z-index: 10;
+}
+
+.des1,
+.des2 {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+
+}
+
+.hero-droite {
+    position: absolute;
+    right: 60px;
+    bottom: 150px;
+    z-index: 3;
+    padding-right: 20px;
+}
+
+.hero-projets {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+.hero-projets:hover {
+    color: #9015d7;
+}
+
+
+/*Pour la section A propos*/
+.apropos {
+    background-color: #1A1B2E;
+    padding: 50px;
+    text-align: center;
+}
+
+.apropos-header {
+    margin-bottom: 10px;
+}
+
+.apropos-tag {
+    color: purple;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.apropos-titre {
+    color: white;
+}
+
+.apropos-contenu {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.apropos-carte {
+    flex: 1;
+    max-width: 400px;
+    background: #2E3350;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgb(136, 6, 128);
+    color: white;
+    align-self: stretch;
+}
+
+.carte-titre {
+    color: rgb(228, 40, 228);
+    text-decoration: underline;
+}
+
+.apropos-contenuIP {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.apropos-contenuIP .apropos-carte {
+    max-width: 500px;
+    width: 100%;
+}
+
+.apropos-contenuIP a {
+    color: #c3a5c9;
+    text-decoration: none;
+}
+
+.apropos-contenuIP a:hover {
+    color: #bc33d4;
+    text-decoration: underline;
+}
+
+.apropos-contenuIP p span {
+    text-decoration: underline;
+}
+
+
+
+/*Pour la section Compétences*/
+.competences {
+    background-color: #1A1B2E;
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.competences-header {
+    margin-bottom: 40px;
+}
+
+.competences-tag {
+    color: purple;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.competences-titre {
+    color: white;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.competences-contenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.competence-item {
+    background-color: #0d0d1a;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: left;
+    border: 1px solid #373f6f;
+    transition: all 0.3s ease;
+}
+
+.competence-item:hover {
+    background: linear-gradient(200deg, #8f8f8f, #dcdcdc, #7a7a7a);
+    box-shadow: 0 0 15px rgba(220, 220, 220, 0.4);
+}
+
+.competence-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.competence-categorie {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9F67FF;
+}
+
+.competence-numero {
+    color: #9CA3B0;
+    font-size: 0.85rem;
+}
+
+.competence-milieu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.competence-icone {
+    font-size: 1.8rem;
+}
+
+.competence-nom {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.competence-barre {
+    background-color: #2E3350;
+    height: 4px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+}
+
+.competence-progression {
+    background: linear-gradient(90deg, #7C3AED, #C4B5FD);
+    height: 4px;
+    border-radius: 50px;
+}
+
+.competence-pct {
+    color: #9F67FF;
+    font-size: 0.85rem;
+    float: right;
+}
+
+
+/*Pour la section Projets*/
+.projets {
+    background-color: #262a3e;
+    padding: 20px;
+    text-align: center;
+}
+
+.projets-contenu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projets-titre {
+    color: white;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.projets-tag {
+    color: purple;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.projet-des {
+    color: #F1F0FF;
+}
+
+.projet-btn {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+.projet-carte {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.projet-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.projet-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    position: absolute;
+    inset: 0;
+    background: rgba(124, 58, 237, 0.9);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.projet-carte:hover .projet-info {
+    opacity: 1;
+}
+
+/*Pour la section Contact*/
+.contact {
+    background-color: #1A1B2E;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-header {
+    margin-bottom: 40px;
+}
+
+.contact-tag {
+    color: purple;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-titre {
+    color: white;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.contact-header div {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.contact-formulaire {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-np {
+    display: flex;
+    gap: 30px;
+}
+
+.npem {
+    background-color: #100218;
+    border: 1px solid #3D3B6E;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    width: 100%;
+}
+
+.message {
+    height: 150px;
+    resize: none;
+}
+
+.contact-btn {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+}
+
+/*Pour le footer*/
+.auteur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    margin-left: 20px;
+    position: absolute;
+    color: purple;
+}
+
+footer a {
+    color: purple;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
